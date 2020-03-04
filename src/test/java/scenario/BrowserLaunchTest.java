@@ -81,7 +81,9 @@ public class BrowserLaunchTest {
 	public void launch_firfox() {
 		System.out.println("Launch firefox Browser");
 		WebDriverManager.firefoxdriver().setup();
-		WebDriver driver = new FirefoxDriver();
+		FirefoxOptions options= new FirefoxOptions();
+		options.addArguments("headless");
+		WebDriver driver = new FirefoxDriver(options);
 //		driver.get("https://github.com/bonigarcia/webdrivermanager/blob/master/README.md");
 		driver.get("https://economictimes.indiatimes.com/");
 //		driver.get("https://www.moneycontrol.com/");
@@ -104,7 +106,7 @@ public class BrowserLaunchTest {
 			}
 			attempt++;
 		}
-
+System.out.println("Execution complete");
 		driver.quit();
 	}
 
