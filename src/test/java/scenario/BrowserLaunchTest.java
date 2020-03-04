@@ -80,7 +80,7 @@ public class BrowserLaunchTest {
 	@Test
 	public void launch_firfox() {
 		System.out.println("Launch firefox Browser");
-		WebDriverManager.firefoxdriver().setup();
+		WebDriverManager.firefoxdriver().arch64().setup();
 		FirefoxOptions options= new FirefoxOptions();
 		options.addArguments("headless");
 		WebDriver driver = new FirefoxDriver(options);
